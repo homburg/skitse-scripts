@@ -8,7 +8,9 @@ function artistDropdownLinks() {
 
   var sections = Array.prototype.slice.call(
     document.querySelectorAll("section[id].Index-page--has-image")
-  );
+  ).filter(function (e) {
+    return -1 === e.id.indexOf("forside");
+  });
 
   var sep = " · ";
 
